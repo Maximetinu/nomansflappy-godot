@@ -14,3 +14,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("jump") :
 		linear_velocity = Vector3.UP * jump_force
 	pass
+
+
+func _on_Obstacle_body_entered(body):
+	print("Obstacle touched")

@@ -13,3 +13,5 @@ size = 10.0
 [node name="Player" parent="." instance=ExtResource( 1 )]
 
 [node name="Obstacle" parent="." instance=ExtResource( 2 )]
+
+[connection signal="body_entered" from="Obstacle" to="Player" method="_on_Obstacle_body_entered"]
