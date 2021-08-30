@@ -14,4 +14,4 @@ func _on_Obstacle_Spawner_obstacle_spawned(obstacle):
 
 
 func _on_Obstacle_body_entered(body):
-	print("Obstacle touched")
+	get_tree().reload_current_scene()
