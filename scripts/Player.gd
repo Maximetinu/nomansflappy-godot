@@ -2,6 +2,7 @@ extends RigidBody
 
 
 const jump_force = 10
+var score = 0
 
 
 func _process(delta):
@@ -19,4 +20,5 @@ func _on_Obstacle_body_entered(body):
 	
 
 func _on_Score_Trigger_body_entered(body):
-	print("score++")
+	score += 1
+	print(str(score))
