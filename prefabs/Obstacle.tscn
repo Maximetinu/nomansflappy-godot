@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/Obstacle.gd" type="Script" id=1]
+[ext_resource path="res://materials/yellow.tres" type="Material" id=2]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.5, 5, 1 )
@@ -15,6 +16,7 @@ shape = SubResource( 1 )
 [node name="CSGBox Up" type="CSGBox" parent="CollisionShape Up"]
 width = 1.0
 height = 10.0
+material = ExtResource( 2 )
 
 [node name="CollisionShape Down" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.5, 0 )
@@ -23,3 +25,4 @@ shape = SubResource( 1 )
 [node name="CSGBox Down" type="CSGBox" parent="CollisionShape Down"]
 width = 1.0
 height = 10.0
+material = ExtResource( 2 )
