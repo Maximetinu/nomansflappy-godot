@@ -1,7 +1,7 @@
 extends Area
 
 
-const speed = 5
+const speed = 3
 
 
 func _process(delta):

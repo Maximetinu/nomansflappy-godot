@@ -1,7 +1,7 @@
 extends RigidBody
 
 
-var jump_force = 15
+const jump_force = 10
 
 
 func _process(delta):

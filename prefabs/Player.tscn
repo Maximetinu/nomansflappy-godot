@@ -3,9 +3,10 @@
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 
 [sub_resource type="SphereShape" id=1]
+radius = 0.5
 
 [node name="Player" type="RigidBody"]
-gravity_scale = 3.0
+gravity_scale = 3.5
 axis_lock_linear_x = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true
@@ -14,6 +15,9 @@ axis_lock_angular_z = true
 script = ExtResource( 1 )
 
 [node name="CSGSphere" type="CSGSphere" parent="."]
+radius = 0.5
+radial_segments = 24
+rings = 24
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 1 )
