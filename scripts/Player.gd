@@ -1,6 +1,9 @@
 extends RigidBody
 
 
+signal score_up(new_score)
+
+
 const jump_force = 10
 var score = 0
 
@@ -21,4 +24,5 @@ func _on_Obstacle_body_entered(body):
 
 func _on_Score_Trigger_body_entered(body):
 	score += 1
+	emit_signal("score_up", score)
 	print(str(score))
