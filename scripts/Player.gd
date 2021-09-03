@@ -27,6 +27,7 @@ func _on_Obstacle_body_entered(body):
 	$Tween.start()
 	yield($Tween, "tween_completed")
 	queue_free()
+	
 
 func _on_Score_Trigger_body_entered(body):
 	score += 1
