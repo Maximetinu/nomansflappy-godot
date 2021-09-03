@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://fonts/ArcadeFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/GameOverUI.gd" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0, 0, 0, 1 )
@@ -56,6 +57,7 @@ tracks/2/keys = {
 [node name="GameOverUI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -105,3 +107,5 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "GameOverUI_Show"
 anims/GameOverUI_Show = SubResource( 4 )
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
