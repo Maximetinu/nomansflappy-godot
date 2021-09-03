@@ -2,6 +2,7 @@ extends RigidBody
 
 
 signal score_up(new_score)
+signal player_dead()
 
 
 const jump_force = 10
@@ -26,6 +27,7 @@ func _on_Obstacle_body_entered(body):
 	$Tween.interpolate_property(self, "scale", self.scale, self.scale * 35, 0.5, Tween.TRANS_QUAD, Tween.EASE_OUT)
 	$Tween.start()
 	yield($Tween, "tween_completed")
+	emit_signal("player_dead")
 	queue_free()
 	
 
