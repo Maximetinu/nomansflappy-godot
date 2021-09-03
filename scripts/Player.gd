@@ -20,6 +20,19 @@ func _on_Obstacle_Spawner_obstacle_spawned(obstacle):
 
 
 func _on_Obstacle_body_entered(body):
+	death()
+	
+
+func _on_Score_Trigger_body_entered(body):
+	score += 1
+	emit_signal("score_up", score)
+
+
+func _on_GameBounds_body_exited(body):
+	death()
+	
+
+func death():
 	set_process(false)
 	self.gravity_scale = 0
 	self.linear_velocity = Vector3.ZERO
@@ -29,8 +42,4 @@ func _on_Obstacle_body_entered(body):
 	yield($Tween, "tween_completed")
 	emit_signal("player_dead")
 	queue_free()
-	
 
-func _on_Score_Trigger_body_entered(body):
-	score += 1
-	emit_signal("score_up", score)
