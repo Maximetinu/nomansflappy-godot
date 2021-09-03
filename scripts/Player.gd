@@ -16,7 +16,7 @@ func _process(delta):
 	
 func _on_Obstacle_Spawner_obstacle_spawned(obstacle):
 	obstacle.connect("body_entered", self, "_on_Obstacle_body_entered")
-	obstacle.get_node("Score Trigger").connect("body_entered", self, "_on_Sc ore_Trigger_body_entered")
+	obstacle.get_node("Score Trigger").connect("body_entered", self, "_on_Score_Trigger_body_entered")
 
 
 func _on_Obstacle_body_entered(body):
