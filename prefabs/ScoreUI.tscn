@@ -23,9 +23,9 @@ __meta__ = {
 [node name="ScorePanel" type="Panel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -46.0
+margin_left = -82.0
 margin_top = 40.0
-margin_right = 46.0
+margin_right = 83.0
 margin_bottom = 120.0
 custom_styles/panel = SubResource( 1 )
 __meta__ = {
@@ -42,7 +42,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "0"
+text = "000"
 align = 1
 valign = 1
 __meta__ = {
@@ -51,9 +51,7 @@ __meta__ = {
 
 [node name="ScoreLabel" type="Label" parent="ScorePanel"]
 anchor_right = 1.0
-margin_left = -6.0
 margin_top = -39.0
-margin_right = 4.0
 margin_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -61,7 +59,6 @@ size_flags_horizontal = 0
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "score"
-align = 1
 valign = 2
 __meta__ = {
 "_edit_use_anchors_": false
